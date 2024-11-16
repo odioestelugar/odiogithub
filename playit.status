@@ -682,3 +682,12 @@ Error: ClientError(TooManyRequests)
 TUNNELS
 listing-ist.gl.joinmc.link => 127.0.0.1:25565 (minecraft-java)
 pc-treatment.gl.at.ply.gg:1130 => 127.0.0.1:1130 (proto: Udp, port count: 1)
+[2J8[0mplayit (v0.15.26): 1731733253216 tunnel running, 2 tunnels registered
+
+
+TUNNELS
+listing-ist.gl.joinmc.link => 127.0.0.1:25565 (minecraft-java)
+pc-treatment.gl.at.ply.gg:1130 => 127.0.0.1:1130 (proto: Udp, port count: 1)
+[2J8[0mGot Error
+MSG: Failed to load latest tunnels
+Error: ClientError(TooManyRequests)

@@ -1,0 +1,32 @@
+Events:
+  fogata_click:
+    type: custom
+    custom_event_data:
+      event: org.bukkit.event.player.PlayerInteractEntityEvent
+      player_variable: getPlayer()
+      variables_to_capture:
+      - '%golem_tags%;getRightClicked().getScoreboardTags()'
+    conditions:
+    - '%golem_tags% contains fogata_h'
+    actions:
+      default:
+      - 'cancel_event: true'
+      - 'console_command: cpanel itssos %player% '
+  revivir_entrar:
+    type: player_join
+    conditions:
+    - '%player_gamemode% == SPECTATOR'
+    actions:
+      default:
+      - 'to_all: message: &b&l%player% &3ha revivido.'
+      - 'console_command: tag %player% add rev'
+            - 'wait: 5'
+      - 'console_command: emotes play revivir100 %player%'
+      - 'console_command: cam-server start revivir %player% 5s'
+      - 'console_command: scoreboard players set @e[tag=fogata_h] cpala.ded3s.anim 200'
+      - 'console_command: playsound cpaladeds3:revivir master @a -539.49 203.00 -261.47'
+      - 'gamemode: SURVIVAL'
+      - 'wait: 10'
+      - 'console_command: tag %player% remove rev'
+      - 'gamemode: SURVIVAL'
+    enabled: true
